@@ -1,0 +1,67 @@
+body{
+    font-family:'Times New Roman';
+    background-color: rgb(12, 143, 186);
+    
+    
+}
+.main {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.alertMe{
+    background-color:lightcyan;
+    border: 2px solid black;
+    padding: 5px;
+    width: 40%;
+    margin: 25px;
+    border-radius:10px;
+    text-align: center;
+    
+    
+}
+.textTester{
+    background-color: lightcyan;
+    border: 2px solid black;
+    padding: 5px;
+    width: 40%;
+    margin: 25px;
+    text-align: center;
+    border-radius:10px;
+}
+
+.changeColor{
+    background-color: lightcyan;
+        border: 2px solid black;
+        padding: 5px;
+        width: 40%;
+        margin: 25px;
+        text-align: center;
+        border-radius:10px;
+    
+
+}
+.addText{
+    background-color: lightcyan;
+        border: 2px solid black;
+        padding: 5px;
+        width: 40%;
+        margin: 25px;
+        text-align: center;
+        border-radius:10px;
+}
+.submit_button:hover{
+    background-color:rgb(12, 143, 186);
+}
+.validateText:hover{
+    background-color: rgb(12, 143, 186);
+}
+.change_color:hover{
+    background-color: rgb(12, 143, 186);
+}
+.add_text:hover{
+    background-color: rgb(12, 143, 186);
+}
