@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title > Intro to java script</title>
+        <link rel ="stylesheet" href ="lab4.css">
+    </head>
+    <body>
+        <h1 id = "word">INST377 - Lab4</h1>
+        <div class ="main">
+        
+            <!--Alert me section that takes name and display user's input -->
+            <div class = "alertMe">
+                <form name = "nameForm" onclick = alertMe()>
+                    <label for = "firstName">First Name:</label>
+                    <input type = "text" placeholder ="Chale" id = "firstName" required> 
+                    <button  type = "submit" class ="submit_button" value = "Show firstName">Alert Me! </button>
+                </form>
+            <br>
+            </div>
+            <!--Change color section that changes the color of the page -->
+            <div class ="changeColor"  id= "colorChange" onclick ="changeColor()">
+                <button type ="Submit" class = "change_color">Change Color</button>
+            </div>
+
+            <!--Text Tester section with validateText button-->
+            <div class ="textTester" >
+                <form id = textTesterForm onclick ="validateText()"  >
+                    <label>Text Tester:</label>
+                    <input type = "text" id = "TextTester" required >
+                    <button type ="Submit"class="validateText">Validate Text</button>
+                </form>
+            </div>
+            
+            <!--Add text section -->
+            <div class="addText"  onclick = "addText()">
+                <button type = "button" class = "add_text" > Add Text</button>
+            </div>
+            
+        </div>
+    <script type = "text/javascript">
+
+        /* Alert me function that returns user's input*/
+        function alertMe(){
+            var firstName = document.getElementById("firstName").value;
+            if(firstName)
+            {
+                alert('Hi'+ " "+ firstName );
+            }
+                
+        }
+        
+        /* Change color function that changes background color*/
+            let isLightblue = true;
+        function changeColor() {
+            if (isLightblue) {
+                document.body.style.backgroundColor = "#48cc90";
+            } else {
+                document.body.style.backgroundColor = "#5AB8BF";
+            }
+            isLightblue = !isLightblue;
+        }
+        /*Validate text function that validates text and return */
+        function validateText(){
+            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+            const text = document.getElementById("TextTester").value;
+            if(validationRegex.test(text)) {
+                alert('Ohhhh----Nahh')
+                return false ;
+            } else {
+                return true;
+            }
+        }
+        /* Add text function that adds "with javascript" text*/
+        function addText(){
+            const h1 = document.getElementById("word");
+            const addText= "With Javascript";
+            if (!h1.innerText.includes(addText)) {
+                h1.innerText +=" "+ addText;
+    }
+        }
+
+        </script>
+    </body>
+</html>
+
